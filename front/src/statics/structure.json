@@ -1,0 +1,26 @@
+{
+    "user": {
+        "userid1": {
+            "name": "test",
+            "email": "test",
+            "password": "test"
+        },
+        "userid2": {
+            "name": "test",
+            "email": "test",
+            "password": "test"
+        }
+    },
+    "article": {
+        "userid1": {
+            "title": "test title",
+            "idarticle": 1,
+            "content": "blababala"
+        },
+        "userid2": {
+            "title": "test title",
+            "idarticle": 1,
+            "content": "blababala"
+        }
+    }
+}
