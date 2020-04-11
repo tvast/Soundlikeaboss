@@ -57,7 +57,7 @@ export default {
   methods: {
 
     async postData (inputData) {
-      const response = await fetch('http://localhost:2800/addArticle', {
+      const response = await fetch('https://lit-ocean-56096.herokuapp.com/addArticle', {
         method: 'POST', // *GET, POST, PUT, DELETE, etc.
         // method: 'POST', // *GET, POST, PUT, DELETE, etc.
         mode: 'cors', // no-cors, *cors, same-origin

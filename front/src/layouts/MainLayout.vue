@@ -12,11 +12,11 @@
           @click="leftDrawerOpen = !leftDrawerOpen"
         />
 
-        <q-toolbar-title>
+        <q-toolbar-title class="text-dark">
           SLAB
         </q-toolbar-title>
 
-        <div>Version 1.0.0 {{getDate}}</div>
+        <div class="text-dark">Version 1.0.0 {{getDate}}</div>
         <!-- <q-img
           class="header-image absolute-top"
           src="statics/sound.png"
@@ -54,11 +54,25 @@
             to="/"
           >
             <q-item-section avatar>
-              <q-icon name="star" />
+              <q-icon name="book" />
+            </q-item-section>
+
+            <q-item-section to="/addArticle">
+              Write an article
+            </q-item-section>
+          </q-item>
+          <q-item
+            clickable
+            v-ripple
+            exact
+            to="/"
+          >
+            <q-item-section avatar>
+              <q-icon name="face" />
             </q-item-section>
 
             <q-item-section to="/">
-              Home
+              Login
             </q-item-section>
           </q-item>
 
@@ -87,6 +101,18 @@
       <keep-alive>
         <router-view />
       </keep-alive>
+      <q-page-sticky
+        @click="getDarker()"
+        position="bottom-right"
+        :offset="[18, 18]"
+      >
+        <q-btn
+          fab
+          icon="build"
+          color="accent"
+        />
+      </q-page-sticky>
+
     </q-page-container>
   </q-layout>
 </template>
@@ -144,12 +170,18 @@ export default {
       ]
     }
   },
+  methods: {
+    getDarker () {
+      return this.$q.dark.toggle()
+    }
+  },
   computed: {
     getDate () {
       const timeStamp = Date.now()
       return date.formatDate(timeStamp, 'dddd D MMMM')
     }
   }
+
 }
 </script>
 <style lang="scss">

@@ -21,7 +21,7 @@ export default {
   methods: {
 
     async getactivedeveloper () {
-      const response = await fetch('http://localhost:2800/getDatasql')
+      const response = await fetch('https://lit-ocean-56096.herokuapp.com/getDatasql')
       return await response.json()
     },
     GetdataPrint () {
